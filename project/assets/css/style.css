@@ -1,0 +1,154 @@
+body{
+    background-color: #303030;
+    color: aliceblue;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+}
+
+h1{
+    font-weight: 600;
+    text-align: center;
+    color: aliceblue;
+    padding: 10px 0px;
+}
+
+table{
+    position: absolute;
+    left: 38%;
+}
+
+.my-btn{
+    background-color: #101010;
+    color: aliceblue;
+    padding: 4px 8px;
+    text-decoration: none;
+    font-family: Calibri, sans-serif;
+    border-radius: 5px;
+    position: absolute;
+    left: 800px;
+    top: 500px;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+.my-btn:hover{
+    background-color: #424242;
+    transform: scale(1.02);
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2), -1px -1px 8px rgba(0,0,0,0.2);
+}
+
+.my-table-btn{
+    background-color: #101010;
+    color: aliceblue;
+    padding: 4px 8px;
+    text-decoration: none;
+    font-family: Calibri, sans-serif;
+    border-radius: 5px;
+    position: absolute;
+    left: 1100px;
+    top: 500px;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+.my-table-btn:hover{
+    background-color: #424242;
+    transform: scale(1.02);
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2), -1px -1px 8px rgba(0,0,0,0.2);
+}
+
+.my-delete-btn{
+    background-color: #F15A50;
+    color: aliceblue;
+    padding: 4px 8px;
+    text-decoration: none;
+    font-family: Calibri, sans-serif;
+    border-radius: 5px;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+.my-delete-btn:hover{
+    background-color: #F16A70;
+    transform: scale(1.02);
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2), -1px -1px 8px rgba(0,0,0,0.2);
+}
+
+.my-detail-btn{
+    background-color: #91D877;
+    color: aliceblue;
+    padding: 4px 8px;
+    text-decoration: none;
+    font-family: Calibri, sans-serif;
+    border-radius: 5px;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+.my-detail-btn:hover{
+    background-color: #B1D877;
+    transform: scale(1.02);
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2), -1px -1px 8px rgba(0,0,0,0.2);
+}
+
+.my-update-btn{
+    background-color: #5CDCCA;
+    color: aliceblue;
+    padding: 4px 8px;
+    text-decoration: none;
+    font-family: Calibri, sans-serif;
+    border-radius: 5px;
+    border: none;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+.my-update-btn:hover{
+    background-color: #8CDCDA;
+    transform: scale(1.02);
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2), -1px -1px 8px rgba(0,0,0,0.2);
+}
+
+.my-submit-btn{
+    background-color: #5CDCCA;
+    color: aliceblue;
+    padding: 4px 8px;
+    text-decoration: none;
+    font-family: Calibri, sans-serif;
+    border-radius: 5px;
+    border: none;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+.my-submit-btn:hover{
+    background-color: #8CDCDA;
+    transform: scale(1.02);
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2), -1px -1px 8px rgba(0,0,0,0.2);
+}
+
+.my-reset-btn{
+    background-color: #F15A50;
+    color: aliceblue;
+    padding: 4px 8px;
+    text-decoration: none;
+    font-family: Calibri, sans-serif;
+    border-radius: 5px;
+    border: none;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+.my-reset-btn:hover{
+    background-color: #F16A70;
+    transform: scale(1.02);
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2), -1px -1px 8px rgba(0,0,0,0.2);
+}
+/*media query*/
+
+@media only screen and (max-width: 768px) {
+    table{
+        width: 90%;
+    }
+}
+
+
+
+
+

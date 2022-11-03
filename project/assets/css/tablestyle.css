@@ -1,0 +1,33 @@
+table{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+    border-collapse: collapse;
+    width: 1000px;
+    height: 200px;
+    border: 1px solid #BDC3C7;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2), -1px -1px 8px rgba(0,0,0,0.2);
+}
+
+tr{
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+
+th,td{
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #DDD;
+}
+
+th{
+    background-color: #5CDCCA;
+    color: aliceblue;
+}
+
+tr:hover{
+    background-color: #252525;
+    transform: scale(1.02);
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2), -1px -1px 8px rgba(0,0,0,0.2);
+}

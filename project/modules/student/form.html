@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Form</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <h1>Student Form</h1>
+    <form action="insert.php" method="post" id="form">
+        <table cellspacing="5">
+            <tr valign="top">
+                <td>
+                    <label>Full Name:</label>
+                </td>
+                <td>
+                    <input type="text" name="name" id="nameField" placeholder="Type your name here" required pattern="([a-zA-Z\s]{3,})"><br>
+                    <span class="error-msg" id="nameFieldMsg"></span>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    <label>Calling Name:</label>
+                </td>
+                <td>
+                    <input type="text" name="sname" id="snameField" placeholder="Type calling name here" required pattern="([a-zA-Z\s]{3,})"><br>
+                    <span class="error-msg" id="snameFieldMsg"></span>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    <label>Age:</label>
+                </td>
+                <td>
+                    <input type="text" name="age" id="ageField" placeholder="Type your age here" required pattern="^(1[89]|[2-9]\d)$"><br>
+                    <span class="error-msg" id="ageFieldMsg"></span>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    <label>NIC Number:</label>
+                </td>
+                <td>
+                    <input type="text" name="nic" id="nicField" placeholder="Type NIC number here" required pattern="^\s*([\d]{9}[v]v|x|X])|([\d]{12})\s*$"><br>
+                    <span class="error-msg" id="nicFieldMsg"></span>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    <label>Address</label>
+                </td>
+                <td>
+                    <textarea type="text" name="address" id="addressField" placeholder="Type your address here" required></textarea><br>
+                    <span class="error-msg" id="addressFieldMsg"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Gender:</label><br>
+                </td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="Male" checked>Male
+                    <input type="radio" id="female" name="gender" value="Female">Female
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    <label>Mobile:</label>
+                </td>
+                <td>
+                    <input type="text" name="mobile" id="mobileField" placeholder="Type mobile number here" required pattern="^([\d]{10})$"><br>
+                    <span class="error-msg" id="mobileFieldMsg"></span>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    <label>E-mail:</label>
+                </td>
+                <td>
+                    <input type="text" name="email" id="emailField" placeholder="Type your E-mail here" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"><br>
+                    <span class="error-msg" id="emailFieldMsg"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: right">
+                    <button class="my-reset-btn" type="reset">Clear</button>
+                    <button class="my-submit-btn" type="submit">Regiter</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <br>
+    <!----><a class="my-btn" href="table.php">All Student</a>
+    <script>
+        const form = document.getElementById('form');
+        const nameField = document.getElementById('nameField');
+        const nameFieldMsg = document.getElementById('nameFieldMsg');
+        const ageField = document.getElementById('ageField');
+        const ageFieldMsg = document.getElementById('ageFieldMsg');
+
+        function validateName(){
+            const name = nameField.value.trim();
+            const crit1 = name != "";
+            const crit2 = name.length >= 3;
+            if (!crit1){
+                nameFieldMsg.innerHTML = 'Name is required';
+                return false;
+            }
+            if (!crit2){
+                nameFieldMsg.innerHTML = 'Name shoud has at least 3 characters';
+                return false;
+            }
+
+            nameField.innerHTML = "";
+            return true;
+        }
+
+        function validateAge(){
+            const age = ageField.value.trim();
+            const crit1 = age != "";
+            const crit2 = age.length >= 2;
+            if (!crit1){
+                ageFieldMsg.innerHTML = 'Age is required';
+                return false;
+            }
+            if (!crit2){
+                ageFieldMsg.innerHTML = 'Age shoud be grater then nine years';
+                return false;
+            }
+
+            ageField.innerHTML = "";
+            return true;
+        }
+
+        form.addEventListener('submit', function(e) {
+            const nameValidity = validateName();
+            const ageValidity = validateAge();
+
+            if (!nameValidity || !ageValidity) e.preventDefault();
+        });
+    </script>
+    <style>
+        .error-msg{
+            color: #b90303;
+            font-size: small;
+        }
+    </style>
+</body>
+</html>
